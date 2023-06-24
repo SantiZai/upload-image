@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 * {
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
@@ -12,20 +14,52 @@
 }
 
 #shadow {
+    height: 460px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     box-shadow: 0px 4px 12px 0px #0000001A;
-    padding: 40px 20px;
+    padding: 40px 10px;
     text-align: center;
     border-radius: 12px;
+}
+
+#container-loading {
+    height: 130px;
+    width: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 4px 12px 0px #0000001A;
+    border-radius: 12px;
+}
+
+#container-loading>h4 {
+    width: 300px;
+    text-align: left;
+    color: #4F4F4F;
+    margin-top: 35px;
+    margin-bottom: 20px;
+    font-size: 18px;
 }
 
 #container>h4 {
     color: #4F4F4F;
     font-size: 18px;
+    margin-bottom: 8px;
 }
 
 #container>span {
     color: #828282;
     font-size: 11px;
+    margin-bottom: 8px;
+}
+
+#container>p {
+    color: #BDBDBD;
+    font-size: 14px;
 }
 
 #shadow>p {
@@ -55,23 +89,82 @@
 }
 
 #container-img {
+    height: 300px;
+    width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-radius: 12px;
+    margin-top: 15px;
+}
+
+#container-img>h4 {
+    font-size: 18px;
+    color: #4F4F4F;
 }
 
 #img-selected {
     height: auto;
-    width: 200px;
+    width: 300px;
     border-radius: 12px;
+    margin-bottom: 15px;
 }
 
-#button-file {
-    padding: 7px 12px;
+.button {
+    padding: 8px 16px;
     border: none;
     background-color: #2F80ED;
     color: white;
     border-radius: 8px;
     font-size: 12px;
+    cursor: pointer;
+}
+
+#container-copy {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F6F8FB;
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    padding: 2px 2px 2px 6px;
+    width: 292px;
+}
+
+#label-copy {
+    font-size: 12px;
+    margin-right: 6px;
+    margin-left: 4px;
+}
+
+#barra-cargando {
+    width: 300px;
+    height: 6px;
+    border-radius: 10px;
+    background-color: #F2F2F2;
+    position: relative;
+}
+
+#progreso-barra {
+    right: 0;
+    width: 20%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: #2F80ED;
+    animation: aumentar 5s ease;
+    position: absolute;
+}
+
+@keyframes aumentar {
+    0% {
+        left: 0%;
+        width: 0%;
+    }
+    20% {
+        width: 20%;
+    }
+    100%{
+        left: 80%;
+    }
 }
